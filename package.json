@@ -1,13 +1,13 @@
 {
   "name": "yoyo.css",
   "version": "0.0.1",
-  "description": "YOYO.CSS framework designed for modern browsers and is fully responsive.",
+  "description": "YoYo.CSS framework designed for modern browsers and is fully responsive.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "none",
+  "author": "bigalan09",
+  "license": "GPL-3.0",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.8",
