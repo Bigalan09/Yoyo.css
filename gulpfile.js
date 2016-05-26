@@ -10,7 +10,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('minify-css', ['styles'], function() {
-    return gulp.src('css/*.css')
+    return gulp.src('css/yoyo.css')
         .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
