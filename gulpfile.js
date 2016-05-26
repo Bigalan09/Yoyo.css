@@ -20,6 +20,8 @@ gulp.task('minify-css', ['styles'], function() {
         .pipe(gulp.dest('./css'));
 });
 
+gulp.task('build', ['styles', 'minify-css']);
+
 //Watch task
 gulp.task('default', function() {
     gulp.watch('sass/**/*.scss', ['styles', 'minify-css']);
