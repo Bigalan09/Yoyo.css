@@ -1,14 +1,14 @@
 // variables.scss
 
 // Colors
+$grey: #959a9f !default;
 
-$black: #111 !default;
-$grey-darker: #222324 !default;
-$grey-dark: #69707a !default;
-$grey: #aeb1b5 !default;
-$grey-light: #d3d6db !default;
-$grey-lighter: #f5f7fa !default;
-$white: #fff !default;
+$black: darken($grey, 64%) !default;
+$grey-darker: darken($grey, 32%) !default;
+$grey-dark: darken($grey, 16%) !default;
+$grey-light: lighten($grey, 16%) !default;
+$grey-lighter: lighten($grey, 32%) !default;
+$white: lighten($grey, 64%) !default;
 
 $blue: #42afe3 !default;
 $green: #97cd76 !default;
@@ -22,3 +22,7 @@ $body-background: $grey-lighter !default;
 
 $font-stack: Helvetica, sans-serif;
 $primary-color: $blue;
+
+$tablet: 769px !default
+$desktop: 980px !default
+$widescreen: 1180px !default
