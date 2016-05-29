@@ -1,0 +1,11 @@
+// generic.scss
+
+.column
+  flex: 1
+  padding: 8px
+  @for $i from 1 through 12
+    .columns > &.col-#{$i}
+      flex: none
+      width: ($i / 12) * 100%
+.columns
+  display: flex
