@@ -3,18 +3,23 @@
 
 Yoyo.CSS framework designed for modern browsers and is fully responsive.
 
-## Installing the dependencies ##
+## Installing the dependencies
 Begin by installing the necessary dependencies by calling:
 
     npm install
     npm install -g gulp
 
-## Building ##
+## Building
 Build the css and minified version by calling:
 
     gulp build
 
-## Develop ##
+## Develop
 Modify the SASS files and have it automatically build by running:
 
     gulp
+
+## TODO
+
+Yoyo.css keeps track of issues/features currently being worked on [Yoyo.css Todo List](https://trello.com/b/7Az9gKJM/todo)
+https://trello.com/b/7Az9gKJM/todo
