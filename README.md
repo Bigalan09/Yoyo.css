@@ -21,4 +21,4 @@ Modify the SASS files and have it automatically build by running:
 
 ## TODO
 
-Yoyo.css keeps track of issues/features currently being worked on [Yoyo.css Todo List](https://trello.com/b/7Az9gKJM/todo)
+Yoyo.css keeps track of issues/features currently being worked on [Yoyo.css todo list](https://trello.com/b/7Az9gKJM/todo)
