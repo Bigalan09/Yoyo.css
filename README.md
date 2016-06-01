@@ -18,6 +18,8 @@ Build the css and minified version by calling:
 Modify the SASS files and have it automatically build by running:
 
     gulp
+To develop in conjunction with the documentation and see any changes of the framework directly in the browser, run: 
+    gulp develop
 
 ## TODO
 
