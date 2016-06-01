@@ -121,6 +121,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+html {
+  background: #ebeced;
+  font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility; }
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: "Source Code Pro", "Monaco", "Inconsolata", monospace;
+  line-height: 1.25; }
+
+.card {
+  background-color: white; }
+
 .column {
   flex: 1;
   padding: 8px; }
