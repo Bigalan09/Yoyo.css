@@ -3,12 +3,20 @@ var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('autoprefixer');
+var postcss = require('gulp-postcss');
 
 gulp.task('styles', function() {
+    var processors = [
+        autoprefixer({
+            browsers: ['last 1 version']
+        })
+    ];
     gulp.src('./*.sass')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css/'))
         .pipe(gulp.dest('./documentation/css/'))
+        .pipe(postcss(processors))
         .pipe(browserSync.stream());
 });
 

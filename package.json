@@ -9,9 +9,11 @@
   "author": "bigalan09",
   "license": "GPL-3.0",
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.10",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.8",
+    "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1"
   },
