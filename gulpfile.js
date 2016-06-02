@@ -5,6 +5,7 @@ var rename = require("gulp-rename");
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
+var sourcemaps   = require('gulp-sourcemaps');
 
 gulp.task('styles', function() {
     var processors = [
@@ -16,11 +17,20 @@ gulp.task('styles', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css/'))
         .pipe(gulp.dest('./documentation/css/'))
-        .pipe(postcss(processors))
         .pipe(browserSync.stream());
 });
 
-gulp.task('minify-css', ['styles'], function() {
+gulp.task('autoprefixer', function () {
+
+    return gulp.src('./css/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest('./documentation/css/'));
+});
+
+gulp.task('minify-css', ['styles', 'autoprefixer'], function() {
     return gulp.src('css/yoyo.css')
         .pipe(cleanCSS({
             compatibility: 'ie8'

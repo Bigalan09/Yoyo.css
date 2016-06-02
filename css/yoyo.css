@@ -150,8 +150,6 @@ pre {
   border: 1px solid #ebeced;
   padding: 8px;
   border-radius: 2px;
-  -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.15); }
 
 .card h1 {
@@ -159,56 +157,72 @@ pre {
   font-size: 24px; }
 
 .column {
-  flex: 1;
+  -ms-flex: 1;
+      flex: 1;
   padding: 8px; }
   .columns > .column.col-1 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 8.33333%;
     padding: 5px; }
   .columns > .column.col-2 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 16.66667%;
     padding: 5px; }
   .columns > .column.col-3 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 25%;
     padding: 5px; }
   .columns > .column.col-4 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 33.33333%;
     padding: 5px; }
   .columns > .column.col-5 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 41.66667%;
     padding: 5px; }
   .columns > .column.col-6 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 50%;
     padding: 5px; }
   .columns > .column.col-7 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 58.33333%;
     padding: 5px; }
   .columns > .column.col-8 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 66.66667%;
     padding: 5px; }
   .columns > .column.col-9 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 75%;
     padding: 5px; }
   .columns > .column.col-10 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 83.33333%;
     padding: 5px; }
   .columns > .column.col-11 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 91.66667%;
     padding: 5px; }
   .columns > .column.col-12 {
-    flex: none;
+    -ms-flex: none;
+        flex: none;
     width: 100%;
     padding: 5px; }
 
 .columns {
+  display: -ms-flexbox;
   display: flex; }
+
+/*# sourceMappingURL=yoyo.css.map */
