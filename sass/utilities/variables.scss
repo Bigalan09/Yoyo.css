@@ -1,0 +1,42 @@
+// variables.scss
+// Colors
+$grey: #959a9f !default;
+$black: darken($grey, 64%) !default;
+$grey-darker: darken($grey, 32%) !default;
+$grey-dark: darken($grey, 16%) !default;
+$grey-light: lighten($grey, 16%) !default;
+$grey-lighter: lighten($grey, 32%) !default;
+$white: lighten($grey, 70%) !default;
+$blue: #42afe3 !default;
+$green: #97cd76 !default;
+$orange: #f68b39 !default;
+$purple: #847bb9 !default;
+$red: #ed6c63 !default;
+$turquoise: #1fc8db !default;
+$yellow: #fce473 !default;
+$body-background: $grey-lighter !default; //
+// Font
+//
+$family-sans-serif: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$family-monospace: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace !default;
+$size-1: 48px !default;
+$size-2: 40px !default;
+$size-3: 28px !default;
+$size-4: 24px !default;
+$size-5: 18px !default;
+$size-6: 14px !default;
+$size-7: 11px !default;
+$weight-normal: 400 !default;
+$weight-bold: 700 !default;
+$weight-title-normal: 300 !default;
+$weight-title-bold: 500 !default; // Breakpoints
+$tablet: 769px !default;
+$desktop: 980px !default;
+$widescreen: 1180px !default; // Typography
+$family-primary: $family-sans-serif !default;
+$family-code: $family-monospace !default;
+$size-small: $size-7 !default;
+$size-normal: $size-6 !default;
+$size-medium: $size-5 !default;
+$size-large: $size-3 !default;
+$size-huge: $size-1 !default;

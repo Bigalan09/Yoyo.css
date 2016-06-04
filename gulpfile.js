@@ -5,7 +5,7 @@ var rename = require("gulp-rename");
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
-var sourcemaps   = require('gulp-sourcemaps');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('styles', function() {
     var processors = [
@@ -13,18 +13,20 @@ gulp.task('styles', function() {
             browsers: ['last 1 version']
         })
     ];
-    gulp.src('./*.sass')
+    gulp.src('./*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css/'))
         .pipe(gulp.dest('./documentation/css/'))
         .pipe(browserSync.stream());
 });
 
-gulp.task('autoprefixer', function () {
+gulp.task('autoprefixer', function() {
 
     return gulp.src('./css/*.css')
         .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+        .pipe(postcss([autoprefixer({
+            browsers: ['last 2 versions']
+        })]))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./css/'))
         .pipe(gulp.dest('./documentation/css/'));
@@ -56,5 +58,5 @@ gulp.task('develop', ['default'], function() {
 
 //Watch task
 gulp.task('default', ['build'], function() {
-    gulp.watch('sass/**/*.sass', ['styles', 'minify-css']);
+    gulp.watch('sass/**/*.scss', ['styles', 'minify-css']);
 });
