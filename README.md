@@ -1,6 +1,8 @@
 # Yoyo.css
 [![Build Status](https://travis-ci.org/Bigalan09/Yoyo.css.svg?branch=master)](https://travis-ci.org/Bigalan09/YoYo.css)
+
 [![forthebadge](http://forthebadge.com/images/badges/built-by-hipsters.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
 
 Yoyo.CSS framework designed for modern browsers and is fully responsive.
 
