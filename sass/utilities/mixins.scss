@@ -1,42 +1,49 @@
 // mixins.scss
-
-=from($device) {
-    @media screen and (min-width: $device) {
-         @content;
+@mixin from($device) {
+     @media screen and (min-width: $device){
+        @content;
     }
 }
-
-=until($device) {
-    @media screen and (max-width: $device - 1px) {
-         @content;
+@mixin until($device) {
+     @media screen and (max-width: $device - 1px){
+        @content;
     }
 }
-/*
-=mobile
-  @media screen and (max-width: $tablet - 1px)
-    @content
-
-=tablet
-  @media screen and (min-width: $tablet)
-    @content
-
-=tablet-only
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
-    @content
-
-=touch
-  @media screen and (max-width: $desktop - 1px)
-    @content
-
-=desktop
-  @media screen and (min-width: $desktop)
-    @content
-
-=desktop-only
-  @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
-    @content
-
-=widescreen
-  @media screen and (min-width: $widescreen)
-    @content
-    */
+@mixin mobile {
+     @media screen and (max-width: $tablet - 1px){
+        @content;
+    }
+}
+@mixin tablet {
+     @media screen and (min-width: $tablet){
+        @content;
+    }
+}
+@mixin tablet-only {
+     @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+        @content;
+    }
+}
+@mixin touch {
+     @media screen and (max-width: $desktop - 1px){
+        @content;
+    }
+}
+@mixin desktop {
+     @media screen and (min-width: $desktop){
+        @content;
+    }
+}
+@mixin desktop-only {
+     @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px){
+        @content;
+    }
+}
+@mixin widescreen {
+     @media screen and (min-width: $widescreen){
+        @content;
+    }
+}
+@mixin boxShadow($colour, $opacity) {
+    box-shadow: 0 2px 3px rgba($colour, $opacity), 0 0 0 1px rgba($colour, $opacity);
+}

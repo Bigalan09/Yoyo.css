@@ -1,24 +1,19 @@
 // variables.scss
 // Colors
-$grey: #959a9f !default;
-$black: darken($grey, 64%) !default;
-$grey-darker: darken($grey, 32%) !default;
-$grey-dark: darken($grey, 16%) !default;
-$grey-light: lighten($grey, 16%) !default;
-$grey-lighter: lighten($grey, 32%) !default;
-$white: lighten($grey, 70%) !default;
-$blue: #42afe3 !default;
-$green: #97cd76 !default;
-$orange: #f68b39 !default;
-$purple: #847bb9 !default;
-$red: #ed6c63 !default;
-$turquoise: #1fc8db !default;
-$yellow: #fce473 !default;
-$body-background: $grey-lighter !default; //
-// Font
-//
+$grey: ( "base": #959a9f );
+$blue: ( "base":#42afe3 );
+$green: ( "base":#87ee76 );
+$orange: ( "base": #f68b39 );
+$purple: ( "base": #847bb9 );
+$red: ( "base": #ed6c63 );
+$turquoise: ( "base": #1fc8db );
+$yellow: ( "base":#fce473 );
+
+$body-background: lighten(map-get($grey, "base"), 25%) !default;
+
 $family-sans-serif: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $family-monospace: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace !default;
+
 $size-1: 48px !default;
 $size-2: 40px !default;
 $size-3: 28px !default;
@@ -40,3 +35,5 @@ $size-normal: $size-6 !default;
 $size-medium: $size-5 !default;
 $size-large: $size-3 !default;
 $size-huge: $size-1 !default;
+
+$colors: ( "yellow": $yellow, "turquoise": $turquoise, "red": $red, "purple": $purple, "orange": $orange, "green": $green, "blue": $blue, "grey": $grey );

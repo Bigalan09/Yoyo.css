@@ -7,21 +7,24 @@ var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('styles', function() {
-    var processors = [
-        autoprefixer({
-            browsers: ['last 1 version']
-        })
-    ];
-    gulp.src('./*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'))
+// secondary tasks
+
+//Compiles sass into .css
+gulp.task('sass', function() {
+    return gulp.src('./yoyo.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(gulp.dest('./css'))
         .pipe(gulp.dest('./documentation/css/'))
         .pipe(browserSync.stream());
 });
 
-gulp.task('autoprefixer', function() {
+// Watches .scss files and compiles into .css
+gulp.task('sass:watch', function() {
+    gulp.watch('./sass/**/*.scss', ['sass']);
+});
 
+// autoprefixes cross browser selectors in css and creates sourcemaps.
+gulp.task('autoprefixer', function() {
     return gulp.src('./css/*.css')
         .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer({
@@ -32,7 +35,8 @@ gulp.task('autoprefixer', function() {
         .pipe(gulp.dest('./documentation/css/'));
 });
 
-gulp.task('minify-css', ['styles', 'autoprefixer'], function() {
+// minifies the css into destributional formats
+gulp.task('minify-css', ['sass', 'autoprefixer'], function() {
     return gulp.src('css/yoyo.css')
         .pipe(cleanCSS({
             compatibility: 'ie8'
@@ -40,13 +44,14 @@ gulp.task('minify-css', ['styles', 'autoprefixer'], function() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./css'))
+        .pipe(browserSync.stream());
 });
 
-gulp.task('build', ['styles', 'minify-css']);
+// primary tasks
 
-// Static server
-gulp.task('develop', ['default'], function() {
+// develop task
+gulp.task('develop', ['build', 'sass:watch'], function() {
     browserSync.init({
         files: "../css/yoyo.css",
         server: {
@@ -56,7 +61,12 @@ gulp.task('develop', ['default'], function() {
     gulp.watch("documentation/*.html").on('change', browserSync.reload);
 });
 
-//Watch task
-gulp.task('default', ['build'], function() {
-    gulp.watch('sass/**/*.scss', ['styles', 'minify-css']);
+// build task
+gulp.task('build', ['minify-css'], function() {
+
+});
+
+// default task
+gulp.task('default', ['build', 'sass:watch'], function() {
+  gulp.watch('./*/**/*.scss', ['sass']);
 });

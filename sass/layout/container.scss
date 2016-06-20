@@ -1,0 +1,14 @@
+// container.scss
+
+.container {
+    position: relative;
+    @include desktop {
+        margin: 0 auto;
+        width: $desktop;
+        max-width: $desktop;
+    }
+    @include widescreen {
+        width: $widescreen;
+        max-width: $widescreen;
+    }
+}

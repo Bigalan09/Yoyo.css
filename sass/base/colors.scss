@@ -1,0 +1,31 @@
+$primary-color: color("blue", "base") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+$secondary-color: color("turquoise", "base") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("blue", "base") !default;
+$body-background: lighten(color("grey", "base"), 25%) !default;
+
+$white: #fdfdfd;
+$grey-lighter: #d2d2d2;
+$grey: #8d8d8d;
+$grey-darker: #5d5d5d;
+$black: #1d1d1d;
+
+.black {
+  background: $black;
+}
+
+@each $color_name, $color in $colors {
+     @each $color_type, $color_value in $color {
+        @if $color_type == "base" {
+            .#{$color_name} {
+                background-color: $color_value !important;
+            }
+            .#{$color_name}-text {
+                color: $color_value !important;
+            }
+        }
+    }
+}
