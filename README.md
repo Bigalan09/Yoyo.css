@@ -1,5 +1,5 @@
 # Yoyo.css
-[![Build Status](https://travis-ci.org/Bigalan09/Yoyo.css.svg?branch=master)](https://travis-ci.org/Bigalan09/YoYo.css)
+[![Build Status](https://travis-ci.org/Bigalan09/Yoyo.css.svg?branch=master)](https://travis-ci.org/Bigalan09/Yoyo.css)
 
 [![forthebadge](http://forthebadge.com/images/badges/built-by-hipsters.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](http://forthebadge.com)
