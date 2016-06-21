@@ -9,7 +9,7 @@ $red: ( "base": #ed6c63 );
 $turquoise: ( "base": #1fc8db );
 $yellow: ( "base":#fce473 );
 
-$body-background: lighten(map-get($grey, "base"), 25%) !default;
+$body-background: lighten(map-get($grey, "base"), 37%) !default;
 
 $family-sans-serif: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $family-monospace: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace !default;

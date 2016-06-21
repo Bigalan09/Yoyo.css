@@ -25,7 +25,7 @@
 }
 
 .card-footer {
-    border-top: 1px solid $grey-lighter;
+    border-top: 1px solid rgba($black, 0.1);
     align-items: stretch;
     display: flex;
 }
@@ -38,7 +38,7 @@
     padding: 10px;
 
     &:not(:last-child) {
-        border-right: 1px solid $grey-lighter;
+        border-right: 1px solid rgba($black, 0.1);
     }
 }
 

@@ -220,7 +220,7 @@ input[type=button] {
   overflow: visible; }
 
 html {
-  background: #d8dadc;
+  background: #f8f8f9;
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -326,7 +326,7 @@ pre {
     margin-top: -20px; }
 
 .card-footer {
-  border-top: 1px solid #d2d2d2;
+  border-top: 1px solid rgba(29, 29, 29, 0.1);
   align-items: stretch;
   display: flex; }
 
@@ -337,7 +337,7 @@ pre {
   justify-content: center;
   padding: 10px; }
   .card-footer-item:not(:last-child) {
-    border-right: 1px solid #d2d2d2; }
+    border-right: 1px solid rgba(29, 29, 29, 0.1); }
 
 .card {
   background: #fdfdfd;
