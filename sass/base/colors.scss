@@ -4,19 +4,14 @@ $white: #ffffff;
 $blue: #3E5C7a;
 $red: #D6492f;
 
-.black {
-    background-color: $black !important;
-}
-.black-text {
-    color: $black !important;
-}
-
-.white {
-    background-color: $white !important;
-}
-.white-text {
-    color: $white !important;
-}
-
 $body-background: lighten($grey, 15%);
- $primary-color: $blue;
+$primary-color: $blue;
+$colors: ( 'blue': $blue , 'red': $red , 'white': $white , 'black': $black );
+@each $name, $value in $colors {
+    .#{$name} {
+        background-color: $value !important;
+    }
+    .#{$name}-text {
+        color: $value !important;
+    }
+}
