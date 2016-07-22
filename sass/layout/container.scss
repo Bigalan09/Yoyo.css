@@ -1,6 +1,7 @@
 // container.scss
 
 .container {
+  clear: both;
     position: relative;
     @include desktop {
         margin: 0 auto;

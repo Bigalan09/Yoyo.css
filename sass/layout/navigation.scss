@@ -1,0 +1,25 @@
+// navigation.scss
+.navigation {
+    background-color: $primary-color;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba($black, 0.2);
+}
+
+nav .top {
+  box-shadow: 0 2px 2px rgba($black, 0.1);
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 15px 10px !important;
+    float: left;
+}
+.navigation a {
+    color: $white;
+    text-decoration: none;
+}
+.navigation a:hover {
+    background-color: lighten($primary-color, 6%);
+
+}

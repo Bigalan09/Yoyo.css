@@ -1,19 +1,8 @@
 // variables.scss
 // Colors
-$grey: ( "base": #959a9f );
-$blue: ( "base":#42afe3 );
-$green: ( "base":#87ee76 );
-$orange: ( "base": #f68b39 );
-$purple: ( "base": #847bb9 );
-$red: ( "base": #ed6c63 );
-$turquoise: ( "base": #1fc8db );
-$yellow: ( "base":#fce473 );
-
-$body-background: lighten(map-get($grey, "base"), 37%) !default;
 
 $family-sans-serif: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $family-monospace: 'Source Code Pro', 'Monaco', 'Inconsolata', monospace !default;
-
 $size-1: 48px !default;
 $size-2: 40px !default;
 $size-3: 28px !default;
@@ -35,5 +24,3 @@ $size-normal: $size-6 !default;
 $size-medium: $size-5 !default;
 $size-large: $size-3 !default;
 $size-huge: $size-1 !default;
-
-$colors: ( "yellow": $yellow, "turquoise": $turquoise, "red": $red, "purple": $purple, "orange": $orange, "green": $green, "blue": $blue, "grey": $grey );
